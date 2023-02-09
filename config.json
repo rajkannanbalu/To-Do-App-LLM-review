@@ -1,0 +1,18 @@
+{   
+    "debug": true,
+
+    "database": {
+        "host":     "localhost", 
+        "port":     3307, 
+        "user":     "root",
+        "pass":     "123" ,
+        "name":     "recordings",
+        "net" :     "tcp",
+        "parsetime": true
+
+    },
+    
+    "server": {
+        "address": ":8000"
+      }
+}
