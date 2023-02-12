@@ -8,6 +8,7 @@ import (
 
 	// Echo Framewrokss
 	"github.com/labstack/echo" 
+	// "github.com/davecgh/go-spew/spew"
 
 	//Viper
 	"github.com/spf13/viper"
@@ -42,7 +43,6 @@ func init(){
 }
 
 func main(){
-	log.Println(viper.GetString(`database.host`))
 	
 	cfg := mysql.Config{
         User:      viper.GetString(`database.user`),
@@ -50,7 +50,8 @@ func main(){
         Net:       viper.GetString(`database.net`),
         Addr:      fmt.Sprintf("%s:%d",viper.GetString(`database.host`), viper.GetInt(`database.port`)),
         DBName:    viper.GetString(`database.name`),
-		ParseTime: viper.GetBool(`database.parsetime`),
+		ParseTime: viper.GetBool(`database.parseTime`),
+
     }
 
     // Get a database handle.
@@ -64,7 +65,6 @@ func main(){
     if pingErr != nil {
         log.Fatal(pingErr)
     }
-    fmt.Println("Connected!")
 
 	defer func(){
 

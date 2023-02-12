@@ -2,13 +2,13 @@
     "debug": true,
 
     "database": {
-        "host":     "localhost", 
-        "port":     3307, 
+        "host":     "mysql", 
+        "port":     3306, 
         "user":     "root",
         "pass":     "123" ,
         "name":     "recordings",
         "net" :     "tcp",
-        "parsetime": true
+        "parseTime": true
 
     },
     
