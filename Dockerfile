@@ -9,7 +9,7 @@ RUN apk update && apk upgrade
 WORKDIR /src
 COPY ./ ./
 
-RUN CGO_ENABLED=0 go build -mod=mod -o /app .
+RUN CGO_ENABLED=0 go build -mod=vendor -o /app .
 
 FROM scratch AS final
 

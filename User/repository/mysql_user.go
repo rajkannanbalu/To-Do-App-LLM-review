@@ -50,7 +50,7 @@ func (m *mysqlUserRepo) Store(ctx context.Context, user *models.UserDB) error{
 // Update the existing user
 func (m *mysqlUserRepo) Update(ctx context.Context, user *models.UserDB) error{
 
-	query := "UPDATE users SET name=? WHERE id =?;"
+	query := "UPDATE users SET name=? WHERE id=?;"
 
 	stmt, err:= m.Conn.PrepareContext(ctx, query)
 	if err != nil{

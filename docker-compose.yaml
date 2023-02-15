@@ -13,8 +13,8 @@ services:
 
   mysql:   # 2 part
     image: mysql # this name has to be the image name in the docker hub
-    # volumes:
-    #   - ./todo.sql:/docker-entrypoint-initdb.d/init.sql
+    volumes:
+      - ./database.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "3306:3306"  # 3307:3306
     environment:
