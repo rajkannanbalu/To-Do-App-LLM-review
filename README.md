@@ -46,8 +46,9 @@ From the adminer GUI
 ```
 From the container terminal
 # To be in the container terminal
-$ docker exec -it container id bash
-$ Mysql command → mysql -u root -h localhost --protocol tcp - P 3306 -p
+$ docker exec -it mysql container id bash
+$ To connect mysql server
+$ mysql -u root -h localhost --protocol tcp -P 3306 -p
 $ Passwords ? --> 123
 # Update the database
 - SQL commands are provided in the database.sql file
