@@ -24,9 +24,9 @@ $ cd To-Do-App
 # Run the application
 $ docker compose up -d mysql adminer
 $ docker compose up web - - build
-
-# The hot reload will running
-
-# Execute the call in another terminal
-$ curl localhost:9090/articles
 ```
+# Database
+### If the database is empty, database can be updated, using to ways
+
+## Way 1
+## Way 2
