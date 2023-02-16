@@ -46,7 +46,7 @@ From the adminer GUI
 ```
 From the container terminal
 # To be in the container terminal
-$ docker exec -it container id
+$ docker exec -it container id bash
 $ Mysql command → mysql -u root -h localhost --protocol tcp - P 3306 -p
 $ Passwords ? --> 123
 # Update the database
