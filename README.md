@@ -29,4 +29,14 @@ $ docker compose up web - - build
 ### If the database is empty, database can be updated, using to ways
 
 ## Way 1
+```
+From the adminer GUI
+# Fill the fields using the following credentials
+- System --> MySQL
+- Server --> mysql
+- Username --> root
+- Password --> 123
+- Database --> recordings
+# Update the database
+```
 ## Way 2
