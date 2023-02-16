@@ -7,3 +7,6 @@ This project has 4 layers :
 * Repository Layer
 * Usecase Layer
 * Delivery Layer
+
+# How to run the projects
+### Here is the steps to run it with docker-compose
