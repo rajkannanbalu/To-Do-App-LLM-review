@@ -38,5 +38,13 @@ From the adminer GUI
 - Password --> 123
 - Database --> recordings
 # Update the database
+- SQL commands are provided in the database.sql file
 ```
 ## Way 2
+From the container terminal
+# To be in the container terminal
+$ docker exec -it container id
+$ Mysql command → mysql -u root -h localhost --protocol tcp - P 3306 -p
+$ Passwords ? --> 123
+# Update the database
+$ SQL commands are provided in the database.sql file
