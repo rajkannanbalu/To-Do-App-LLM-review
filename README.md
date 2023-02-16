@@ -26,7 +26,7 @@ $ docker compose up -d mysql adminer
 $ docker compose up web - - build
 ```
 # Database
-### If the database is empty, database can be updated, using to ways
+### If the database is empty, database can be updated using to ways
 
 ## Way 1
 ```
@@ -52,7 +52,7 @@ $ Passwords ? --> 123
 # Update the database
 - SQL commands are provided in the database.sql file
 ```
-## API
+# API
 ## Way 1
 ```
 #move to project
