@@ -8,7 +8,7 @@ This project has 4 layers :
 * Usecase Layer
 * Delivery Layer
 
-# How to run the projects
+# How to run the project
 #### Here is the steps to run it with ```docker-compose```
 
 ```
