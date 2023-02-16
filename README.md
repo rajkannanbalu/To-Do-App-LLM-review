@@ -53,8 +53,21 @@ $ Passwords ? --> 123
 - SQL commands are provided in the database.sql file
 ```
 ## API
+## Way 1
+```
 #move to project
 $ cd To-Do-App
 
-# Execute the call in another terminal
+#Execute the call in another terminal
 $ curl localhost:8000/tasks
+```
+## Way 2
+```
+# Postman might be a good option 
+# choose the http method
+- Example: Choose GET method 
+# In the url section,type, localhost:8000/endpoint
+- Example: localhost:8000/tasks
+# All the api pattern are menntioned in the following path
+- To-Do-App/Task/delivery/http/task_handler.go
+```
