@@ -9,7 +9,7 @@ This project has 4 layers :
 * Delivery Layer
 
 # How to run the projects
-#### Here is the steps to run it with docker-compose
+#### Here is the steps to run it with ```docker-compose```
 
 ```
 #move to directory
@@ -68,6 +68,6 @@ $ curl localhost:8000/tasks
 - Example: Choose GET method 
 # In the url section,type, localhost:8000/endpoint
 - Example: localhost:8000/tasks
-# All the api pattern are menntioned in the following path
+# All the api patterns are mentioned in the following path
 - To-Do-App/Task/delivery/http/task_handler.go
 ```
