@@ -26,7 +26,7 @@ $ docker compose up -d mysql adminer
 $ docker compose up web - - build
 ```
 # Database
-### If the database is empty, database can be updated using to ways
+### If the database is empty, database can be updated using two ways
 
 ## Way 1
 ```
