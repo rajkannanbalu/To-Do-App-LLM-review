@@ -31,6 +31,8 @@ $ docker compose up web - - build
 ## Way 1
 ```
 From the adminer GUI
+# In the browser, type 
+- localhost:8080
 # Fill the fields using the following credentials
 - System --> MySQL
 - Server --> mysql
@@ -48,5 +50,11 @@ $ docker exec -it container id
 $ Mysql command → mysql -u root -h localhost --protocol tcp - P 3306 -p
 $ Passwords ? --> 123
 # Update the database
-$ SQL commands are provided in the database.sql file
+- SQL commands are provided in the database.sql file
 ```
+## API
+#move to project
+$ cd To-Do-App
+
+# Execute the call in another terminal
+$ curl localhost:8000/tasks
