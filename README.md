@@ -10,3 +10,23 @@ This project has 4 layers :
 
 # How to run the projects
 #### Here is the steps to run it with docker-compose
+
+```
+#move to directory
+$ cd workspace
+
+# Clone into your workspace
+$ git clone https://github.com/SamiraAfrin/To-Do-App.git
+
+#move to project
+$ cd To-Do-App
+
+# Run the application
+$ docker compose up -d mysql adminer
+$ docker compose up web - - build
+
+# The hot reload will running
+
+# Execute the call in another terminal
+$ curl localhost:9090/articles
+```
