@@ -26,7 +26,6 @@ func NewUserUsecase(u User.Repository, timeout time.Duration) User.Usecase {
 func (u *userUsecase) StoreV1(c context.Context, user *models.UserDB) error {
 
 	ctx, cancel := context.WithTimeout(c, u.contextTimeout)
-	defer cancel()
 	fmt.Println("test code")
 	err := u.userRepo.StoreV1(ctx, user)
 	if err != nil {
