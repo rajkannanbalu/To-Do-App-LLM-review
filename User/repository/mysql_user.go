@@ -1,22 +1,21 @@
 package repository
 
 import (
-
 	"context"
 	"database/sql"
 	"fmt"
+
 	"github.com/sirupsen/logrus"
 
 	"To_Do_App/User"
 	"To_Do_App/models"
-	
 )
 
 type mysqlUserRepo struct {
 	Conn *sql.DB
 }
 
-func NewMysqlUserRepo(db *sql.DB) User.Repository{
+func NewMysqlUserRepo(db *sql.DB) User.Repository {
 
 	return &mysqlUserRepo{
 		Conn: db,
@@ -24,56 +23,56 @@ func NewMysqlUserRepo(db *sql.DB) User.Repository{
 }
 
 // Store new data in the database
-func (m *mysqlUserRepo) Store(ctx context.Context, user *models.UserDB) error{
+func (m *mysqlUserRepo) StoreV1(ctx context.Context, user *models.UserDB) error {
 
 	query := "INSERT INTO users (name) VALUES (?);"
 	stmt, err := m.Conn.PrepareContext(ctx, query)
-	if err != nil{
+	if err != nil {
 		return err
 	}
 
 	res, err := stmt.ExecContext(ctx, user.Name)
-	if err!= nil{
+	if err != nil {
 		return err
 	}
 
 	lastID, err := res.LastInsertId()
-	if err != nil{
+	if err != nil {
 		return err
 	}
 
 	user.ID = lastID
 	return nil
 
-}	
+}
 
 // Update the existing user
-func (m *mysqlUserRepo) Update(ctx context.Context, user *models.UserDB) error{
+func (m *mysqlUserRepo) Update(ctx context.Context, user *models.UserDB) error {
 
 	query := "UPDATE users SET name=? WHERE id=?;"
 
-	stmt, err:= m.Conn.PrepareContext(ctx, query)
-	if err != nil{
+	stmt, err := m.Conn.PrepareContext(ctx, query)
+	if err != nil {
 		return err
 	}
 
 	res, err := stmt.ExecContext(ctx, user.Name, user.ID)
-	if err!= nil{
+	if err != nil {
 		return err
 	}
 
 	affect, err := res.RowsAffected()
-	if err!= nil{
+	if err != nil {
 		return err
 	}
 
-	if affect != 1{
+	if affect != 1 {
 		err = fmt.Errorf("Weird Behaviour. Total Affected: %d", affect)
 		return err
 	}
 
 	return nil
-	
+
 }
 
 // Get all the user in the database
@@ -104,7 +103,3 @@ func (m *mysqlUserRepo) GetAllUser(ctx context.Context) ([]*models.UserDB, error
 	}
 	return result, nil
 }
-
-
-
-
