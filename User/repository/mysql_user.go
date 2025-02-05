@@ -76,9 +76,9 @@ func (m *mysqlUserRepo) Update(ctx context.Context, user *models.UserDB) error {
 }
 
 // Get all the user in the database
-func (m *mysqlUserRepo) GetAllUser(ctx context.Context) ([]*models.UserDB, error) {
+func (m *mysqlUserRepo) GetAllUserDetails(ctx context.Context) ([]*models.UserDB, error) {
 
-	rows, err := m.Conn.Query("SELECT id, name FROM users;")
+	rows, err := m.Conn.Query("SELECT id, name FROM users12")
 
 	if err != nil {
 		logrus.Error(err)

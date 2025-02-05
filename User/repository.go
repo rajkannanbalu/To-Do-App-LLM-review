@@ -8,5 +8,5 @@ import (
 type Repository interface {
 	StoreV1(ctx context.Context, a *models.UserDB) error
 	Update(ctx context.Context, a *models.UserDB) error
-	GetAllUser(ctx context.Context) ([]*models.UserDB, error)
+	GetAllUserDetails(ctx context.Context) ([]*models.UserDB, error)
 }
